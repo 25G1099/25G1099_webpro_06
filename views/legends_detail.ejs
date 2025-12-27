@@ -1,0 +1,20 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %>の詳細</h2>
+  <table>
+    <tr><th>項目</th><th>データ</th></tr>
+    <tr><td>ID</td><td><%= data.id %></td></tr>
+    <tr><td>名前</td><td><%= data.name %></td></tr>
+    <tr><td>属性</td><td><%= data.coller %></td> </tr>
+    <tr><td>戦闘タイプ</td><td><%= data.type %></td></tr>
+  </table>
+  <a href="/legends/edit/<%= id %>">編集</a>
+  <a href="/legends/deletecf/<%= id %>">削除</a>
+  <a href="/legends">キャラクター一覧に戻る</a>
+</body>
+</html>

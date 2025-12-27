@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %>の編集</h2>
+  <form action="/APEX/update/<%= data.id - 1 %>" method="POST">
+    <table>
+      <tr><th>項目</th><th>データ</th></tr>
+      
+      <tr><td>レジェンド名</td><td><input type="text" name="name" value="<%= data.name %>"></td></tr>
+      <tr><td>戦術アビリティ</td><td><input type="text" name="ability" value="<%= data.ability %>"></td></tr>
+      <tr><td>戦術アビリティ詳細</td><td><input type="text" name="ability_ex" value="<%= data.ability_ex %>"></td></tr>
+      <tr><td>アルティメットスキル</td><td><input type="text" name="ult" value="<%= data.ult %>"></td></tr>
+      <tr><td>アルティメットスキル詳細</td><td><input type="text" name="ult_ex" value="<%= data.ult_ex %>"></td></tr>
+    </table>
+    <input type="submit" values="登録">
+  </form>
+  <a href="/APEX/<%= data.id - 1 %>">詳細ページに戻る</a>
+</body>
+</html>

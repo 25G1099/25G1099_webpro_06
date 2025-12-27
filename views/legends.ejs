@@ -7,13 +7,14 @@
 <body>
   <h2>キャラクター一覧</h2>
   <table>
-    <tr><th>ID</th><th>レジェンド名</th></tr>
+    <tr><th>ID</th><th>キャラクター名</th></tr>
       <% let number = 0 %>
       <% for( let row of data ) { %>
         <tr><td><%= row.id %></td>
-        <td><a href="/APEX/<%= number %>"><%= row.name %></a></td></tr>
+        <td><a href="/legends/<%= number %>"><%= row.name %></a></td></tr>
         <% number += 1 %>
       <% } %>
+    <tr><td><a href="/legends/create"><%= "新規登録" %></a></td></tr>
   </table>
 </body>
 </html>

@@ -2,18 +2,19 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>APEXクラス一覧</title>
+  <title>キャラクター一覧</title>
 </head>
 <body>
-  <h2>APEXクラス一覧</h2>
+  <h2>レジェンド一覧</h2>
   <table>
-    <tr><th>ID</th><th>クラス名</th></tr>
+    <tr><th>ID</th><th>レジェンド名</th></tr>
       <% let number = 0 %>
       <% for( let row of data ) { %>
         <tr><td><%= row.id %></td>
         <td><a href="/APEX/<%= number %>"><%= row.name %></a></td></tr>
         <% number += 1 %>
       <% } %>
+    <tr><td><a href="/APEX/create"><%= "新規登録" %></a></td></tr>
   </table>
 </body>
 </html>

@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %>の編集</h2>
+  <form action="/fromsoftware/update/<%= data.id - 1 %>" method="POST">
+    <table>
+      <tr><th>項目</th><th>データ</th></tr>
+      
+      <tr><td>タイトル名</td><td><input type="text" name="name" value="<%= data.name %>"></td></tr>
+      <tr><td>シリーズ名</td><td><input type="text" name="series" value="<%= data.series %>"></td></tr>
+      <tr><td>リリース年</td><td><input type="text" name="release" value="<%= data.release %>"></td></tr>
+      <tr><td>メタスコア</td><td><input type="text" name="score" value="<%= data.score %>"></td></tr>
+     
+    </table>
+    <input type="submit" values="登録">
+  </form>
+  <a href="/fromsoftware/<%= data.id - 1 %>">詳細ページに戻る</a>
+</body>
+</html>

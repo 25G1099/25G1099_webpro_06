@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %> を削除</title>
+</head>
+<body>
+  <h2><%= data.name %> を本当に削除しますか？</h2>
+  <form action="/APEX/delete/<%= id %>" >
+    <button type="submit">はい</button>
+  </form>
+    <form action="/APEX/<%= id %>" >
+    <button type="submit">いいえ</button>
+  </form>
+</body>
+</html>

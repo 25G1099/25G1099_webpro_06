@@ -1,0 +1,20 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %>の詳細</h2>
+  <table>
+    <tr><th>項目</th><th>データ</th></tr>
+    <tr><td>ID</td><td><%= data.id %></td></tr>
+    <tr><td>レジェンド名</td><td><%= data.name %></td></tr>
+    <tr><td>戦術アビリティ</td><td><%= data.ability %></td> <td><%= data.ability_ex %></td></tr>
+    <tr><td>アルティメットスキル</td><td><%= data.ult %></td><td><%= data.ult_ex %></td></tr>
+  </table>
+  <a href="/APEX/edit/<%= id %>">編集</a>
+  <a href="/APEX/deletecf/<%= id %>">削除</a>
+  <a href="/APEX">レジェンド一覧に戻る</a>
+</body>
+</html>
